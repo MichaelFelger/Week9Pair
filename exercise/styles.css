@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #87CEEB;
@@ -54,4 +55,51 @@ main, section, footer {
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
+}
+header{
+    
+    display: grid;
+    grid-template-columns: 0fr 2fr 2fr;
+    
+    
+}
+header>nav>ul{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    justify-content: space-between;
+    
+    
+}
+#DYK{
+    grid-area: ga-dyk;
+}
+#PopsicleRace{
+    grid-area: ga-PR;
+}
+#GetRefreshed{
+    grid-area: ga-GR;
+}
+footer{
+    grid-area: ga-footer;
+}
+/* body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "ga-header ga-header"
+        "ga-dyk ga-dyk"
+        "ga-PR ga-GR"
+        "ga-footer ga-footer";
+    align-items: center;
+} */
+/* #banner{
+    grid-area: ga-banner;
+}
+#rainbow{
+    grid-area: ga-pic;
+} */
+main{
+
 }
