@@ -69,7 +69,6 @@ header h1 {
 header nav {
     display: flex;
     flex-grow: 1.5;
-    /* justify-content: space-between; */
     align-items: center;
 }
 
@@ -108,10 +107,8 @@ header>nav>ul{
 
 #PopsicleRace{
     grid-area: ga-PR;
-    display: flex;
-    
+    display: flex;    
 }
-
 
 #PopsicleRace div {
     display: flex;
@@ -132,8 +129,7 @@ header>nav>ul{
 }
 
 #GetRefreshed {
-    grid-area: ga-GR;
-    
+    grid-area: ga-GR;  
 }
 
 #GetRefreshed div {
@@ -141,8 +137,6 @@ header>nav>ul{
     flex-direction: column;
     align-items: center;
     justify-items: flex-start;
-    height: 200px
-
 }
 
 footer{
@@ -157,8 +151,6 @@ section{
 #main-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    align-items: center;
     background-color: #87CEEB;
     gap: 10px;
     padding: 0%;
@@ -167,6 +159,23 @@ section{
     grid-template-areas: 
         "ga-dyk ga-dyk"
         "ga-PR ga-GR"
-        "ga-footer ga-footer";
-        
+        "ga-footer ga-footer";   
+}
+
+#contact {
+    grid-area: ga-contact;
+}
+
+#contactcontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #87CEEB;
+    gap: 10px;
+    padding: 0%;
+    padding-top: 5px;
+
+    grid-template-areas:
+    "ga-content . ."
+    ;
+
 }
