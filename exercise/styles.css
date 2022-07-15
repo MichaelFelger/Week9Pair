@@ -6,7 +6,7 @@ body {
 
 nav ul {
     margin: 0;
-    padding: 20px 0 0 0;
+    /* padding: 20px 0 0 0; */
 }
 
 nav ul li {
@@ -16,6 +16,7 @@ nav ul li {
     border-radius: 5px;
     text-align: center;
     line-height: 50px;
+
 }
 
 header img {
@@ -30,7 +31,7 @@ header h1 {
 main img {
     object-fit: cover;
     margin-right: 20px;
-    height: 350px;
+    height: 450px;
     width: 35%;
 }
 
@@ -55,6 +56,7 @@ main, section, footer {
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
+    text-decoration: none;
 }
 header{  
     display: flex; 
@@ -76,7 +78,13 @@ header>nav>ul{
     flex-direction: row;
     flex-grow: 1;
     justify-content: flex-end;
-    justify-content: space-between; 
+    justify-content: space-between;
+}
+
+.button {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
 }
 
 #DYK{
@@ -84,44 +92,62 @@ header>nav>ul{
     display: flex;
     align-items: center;
 }
+#DYK img {
+    display: flex;
+    flex-shrink: 1;
+}
 
 #DYK div {
     display: flex;
     flex-direction: column;
-    
+}
 
+#DYK div ul li {
+    list-style: none;
 }
 
 #PopsicleRace{
     grid-area: ga-PR;
     display: flex;
+    
 }
 
 
 #PopsicleRace div {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-items: center;
 }
 
+#PopsicleRace div span h2 {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
 #PopsicleRace div img {
-    flex-
+    height: 200px;
+    width: auto;
 }
 
 #GetRefreshed {
     grid-area: ga-GR;
+    
 }
 
 #GetRefreshed div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-items: center;
+    justify-items: flex-start;
+    height: 200px
+
 }
 
 footer{
     grid-area: ga-footer;
+    
 }
 
 section{
@@ -133,8 +159,10 @@ section{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     align-items: center;
-    row-gap: 10px;
-    column-gap: 10px;
+    background-color: #87CEEB;
+    gap: 10px;
+    padding: 0%;
+    padding-top: 5px;
 
     grid-template-areas: 
         "ga-dyk ga-dyk"
