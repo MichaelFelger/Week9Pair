@@ -70,14 +70,21 @@ header nav {
     display: flex;
     flex-grow: 1.5;
     align-items: center;
+    grid-area: ga-nav;
 }
 
-header>nav>ul{
+header nav ul{
     display: flex;
     flex-direction: row;
     flex-grow: 1;
     justify-content: flex-end;
     justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header nav ul{
+    display: flex;
+    align-items: center;
 }
 
 .button {
@@ -166,16 +173,104 @@ section{
     grid-area: ga-contact;
 }
 
+form {
+    grid-area: ga-form;
+}
+
 #contactcontainer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+
     background-color: #87CEEB;
     gap: 10px;
     padding: 0%;
     padding-top: 5px;
+    padding-bottom: 5px;
 
     grid-template-areas:
-    "ga-content . ."
+    "ga-contact"
     ;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    /* box-sizing: border-box;
+    width: 100%; */
+}
+
+#flex-outer {
+    display: flex;
+    box-sizing: border-box;
+}
+
+input, select {
+    width: 250px;
+    margin: 0px 15px 15px 0px;
+    padding: 0 0 0 0;
+}
+button {
+    width: 25%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: #00afef;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 800px){
+    #main-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        background-color: #87CEEB;
+        gap: 10px;
+        padding: 0%;
+        padding-top: 5px;
+    
+        grid-template-areas:
+            "ga-dyk"
+            "ga-PR"
+            "ga-GR"
+            "ga-footer";  
+    }
+    #DYK{
+        grid-area: ga-dyk;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+    }
+    #DYK img {
+        display: flex;
+        width: 100vw;
+        margin: 0 0 0 0;
+    }
+    
+    #DYK div {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #DYK div ul li {
+        list-style: none;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    nav ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 0 0 0;
+    
+    }
+
 
 }
